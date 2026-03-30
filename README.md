@@ -255,24 +255,58 @@ Debounced autocomplete search with highlighted matching text inside task titles.
 
 # 🤖 AI Usage Report
 
-AI tools were used as development assistants for:
+AI tools such as ChatGPT were used as development assistants during this assignment. The goal was not to generate the entire application automatically, but to speed up implementation, debug issues faster, and explore better UI and validation approaches.
 
-• debugging dropdown dependency logic  
-• improving UI transitions  
-• refining validation structure  
-• strengthening edge-case handling  
+Below are examples of how AI was used effectively during development.
 
-During development, an incorrect dropdown dependency implementation initially caused duplicate-value errors. This issue was resolved by validating selected dependency values against existing task IDs before rendering dropdown options.
 
-All generated suggestions were reviewed and manually adapted before integration.
+## Helpful Prompts That Improved Development
 
+Some of the most useful prompts I used were:
+
+• "How to implement Hive local storage for Flutter task manager app"
+• "How to manage state using Provider in Flutter"
+• "How to simulate async delay in Flutter UI without freezing the screen"
+• "How to prevent selecting the same item in DropdownButtonFormField"
+• "How to debounce search input in Flutter"
+
+These helped me structure the storage layer, state management flow, and improve UI responsiveness.
+
+
+## Example of Incorrect AI Suggestion and How It Was Fixed
+
+While implementing the task dependency dropdown, an early AI suggestion caused an issue where the dropdown still kept a previously selected dependency even after the dependency task was removed or filtered.
+
+This produced a runtime error:
+
+"There should be exactly one item with DropdownButton's value."
+
+To fix this, I added validation logic that checks whether the selected dependency still exists inside the available task list before rendering the dropdown. If the dependency is invalid, it resets automatically.
+
+This ensured the UI remained stable even after task deletion or edits.
+
+
+## Additional Improvements Suggested by AI and Adapted Manually
+
+AI suggestions also helped with:
+
+• adding circular dependency prevention between tasks  
+• improving the snackbar-based undo deletion flow  
+• implementing debounced search behavior  
+• adding loading indicators during save operations  
+• improving page transition animations  
+
+However, these suggestions were reviewed and adjusted manually before integration into the application.
+
+
+## Summary
+
+AI was used as a development assistant for debugging, UI improvements, and validation logic suggestions. All architectural decisions, feature integration, and final implementation logic were reviewed and refined manually.
 
 ---
 
 # 👩‍💻 Author
 
-Bhavya  
+Aleti Bhavya  
 KL University
 
-
-# 📁 Folder Structure Overview
